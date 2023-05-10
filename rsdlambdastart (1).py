@@ -10,9 +10,9 @@ from datetime import datetime, timezone
 from time import gmtime, strftime
 
 def start_rds_all():
-    region=os.environ['REGION']
-    key=os.environ['KEY']
-    value=os.environ['VALUE']
+    region=os.environ['us-east-1']
+    key=os.environ['DEV-TEST']
+    value=os.environ['Auto-Shutdown']
     client = boto3.client('rds', region_name=region)
     response = client.describe_db_instances()
 
